@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./App.css";
+import AbcIcon from "@mui/icons-material/Abc";
+import Button from "@mui/material/Button";
 
 function App() {
   const [step, setStep] = useState(0);
@@ -107,6 +109,12 @@ function App() {
 
   return (
     <div className="App">
+      <h1 className="text-3xl font-bold text-lime-600	underline">
+        <AbcIcon />
+        Hello world!
+      </h1>
+      <Button variant="contained">Contained</Button>
+
       <h1>Test</h1>
       {step === 0 && (
         <div>

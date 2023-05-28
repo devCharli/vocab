@@ -1,5 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* styles.css */
-h1 {
+/* h1 {
   color: orange;
 }
 button {
@@ -69,4 +73,4 @@ button {
   height: 100%;
   background-color: #1b23f5;
   transition: width 0.5s ease;
-}
+} */
