@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://devcharli.github.io/",
+  "homepage": "https://devCharli.github.io/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
