@@ -1,6 +1,7 @@
 import { useState } from "react";
 import AbcIcon from "@mui/icons-material/Abc";
 import Button from "@mui/material/Button";
+import { Link } from "react-router-dom";
 
 export default function Page() {
   const [step, setStep] = useState(0);
@@ -114,7 +115,9 @@ export default function Page() {
       </h1>
       <Button variant="contained">Contained</Button>
 
-      <h1>Test</h1>
+      <Link to="/test">Test</Link>
+      <Link to="/about">about</Link>
+      <Link to="/test/1">Test1</Link>
       {step === 0 && (
         <div>
           <button onClick={() => startTest(10)}>Start 10 Questions</button>
