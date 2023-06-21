@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import AdSense from "react-adsense";
+
 import questions from "../../../data/1_beVerb.json";
-import AdsComponent from "../../../Components/AdsComponent";
 
 export default function Test() {
   const [step, setStep] = useState(0);
@@ -129,7 +130,14 @@ export default function Test() {
       )}
       <hr />
       <br />
-      <AdsComponent dataAdSlot="5859998866190874" />
+      <AdSense.Google
+        client="ca-pub-7292810486004926"
+        slot="7806394673"
+        style={{ display: "block" }}
+        format="auto"
+        responsive="true"
+        layoutKey="-gw-1+2a-9x+5c"
+      />
     </div>
   );
   // const { id } = useParams();
