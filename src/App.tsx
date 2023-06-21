@@ -5,6 +5,7 @@ import TestPage from "./pages/Grammar/Test";
 import Test from "./pages/Grammar/Test/[id]";
 import Layout from "./Layout";
 import "./App.css";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/grammar/test" element={<TestPage />} />
         <Route path="/grammar/test/:id" element={<Test />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Layout>
   );
