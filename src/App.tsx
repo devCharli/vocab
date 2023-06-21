@@ -1,20 +1,21 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Home from "./pages/index";
 import About from "./pages/About";
+import TestPage from "./pages/Grammar/Test";
+import Test from "./pages/Grammar/Test/[id]";
+import Layout from "./Layout";
 import "./App.css";
-import TestPage from "./pages/Test";
-import Test from "./pages/Test/[id]";
 
 function App() {
   return (
-    <BrowserRouter>
+    <Layout>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/test" element={<TestPage />} />
-        <Route path="/test/:id" element={<Test />} />
+        <Route path="/grammar/test" element={<TestPage />} />
+        <Route path="/grammar/test/:id" element={<Test />} />
       </Routes>
-    </BrowserRouter>
+    </Layout>
   );
 }
 
