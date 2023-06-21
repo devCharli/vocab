@@ -5,7 +5,6 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 
 import QuizIcon from "@mui/icons-material/Quiz";
-import GoogleAdsense from "react-adsense-google";
 
 export default function Page() {
   return (
@@ -25,14 +24,6 @@ export default function Page() {
             </ListItemButton>
           </Link>
         </List>
-        <GoogleAdsense
-          adClient="ca-pub-5859998866190874"
-          adSlot="2880745092"
-          style={{ display: "block", "text-align": "center" }}
-          adLayout="in-article"
-          adFormat="auto"
-          fullWidthResponsive="true"
-        />
       </div>
     </div>
   );

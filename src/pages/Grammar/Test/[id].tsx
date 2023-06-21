@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import questions from "../../../data/1_beVerb.json";
-import GoogleAdsense from "react-adsense-google";
 
 export default function Test() {
   const [step, setStep] = useState(0);
@@ -129,14 +128,6 @@ export default function Test() {
       )}
       <hr />
       <br />
-      <GoogleAdsense
-        adClient="ca-pub-5859998866190874"
-        adSlot="2880745092"
-        style={{ display: "block", "text-align": "center" }}
-        adLayout="in-article"
-        adFormat="auto"
-        fullWidthResponsive="true"
-      />
     </div>
   );
   // const { id } = useParams();
