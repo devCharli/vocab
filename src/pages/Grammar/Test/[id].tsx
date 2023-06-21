@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import questions from "../../../data/1_beVerb.json";
+import AdsComponent from "../../../Components/AdsComponent";
 
 export default function Test() {
   const [step, setStep] = useState(0);
@@ -128,6 +129,7 @@ export default function Test() {
       )}
       <hr />
       <br />
+      <AdsComponent dataAdSlot="5859998866190874" />
     </div>
   );
   // const { id } = useParams();
