@@ -78,6 +78,7 @@
     "id": 10,
     "text": "You and I ___ friends.",
     "translateOptions": ["너와 그는 친구 사이다", "너와 나는 친구 사이다."],
+    "translateAnswer": "너와 나는 친구 사이다",
     "options": ["is", "are"],
     "correct": "are"
   }

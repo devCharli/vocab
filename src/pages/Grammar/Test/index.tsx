@@ -1,55 +1,31 @@
-import * as React from "react";
-import List from "@mui/material/List";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import Collapse from "@mui/material/Collapse";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import ExpandLess from "@mui/icons-material/ExpandLess";
-import ExpandMore from "@mui/icons-material/ExpandMore";
-import StarBorder from "@mui/icons-material/StarBorder";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-export default function Test() {
-  const [open, setOpen] = React.useState(true);
+const TestPage = () => {
+  const [quizzes, setQuizzes] = useState<{ id: string; title: string }[]>([]);
 
-  const handleClick = () => {
-    setOpen(!open);
-  };
+  useEffect(() => {
+    import("../../../data/QuizIndex.json").then((data) => {
+      setQuizzes(data.default);
+    });
+  }, []);
+
+  if (quizzes.length === 0) {
+    return <div>Loading...</div>;
+  }
 
   return (
-    <List
-      sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}
-      component="nav"
-      aria-labelledby="nested-list-subheader"
-    >
-      <ListItemButton onClick={handleClick}>
-        <ListItemIcon>
-          <InboxIcon />
-        </ListItemIcon>
-        <ListItemText primary="Level I" />
-        {open ? <ExpandLess /> : <ExpandMore />}
-      </ListItemButton>
-      <Collapse in={open} timeout="auto" unmountOnExit>
-        <Link to="/grammar/test/1">
-          <List component="div" disablePadding>
-            <ListItemButton sx={{ pl: 4 }}>
-              <ListItemIcon>
-                <StarBorder />
-              </ListItemIcon>
-              <ListItemText primary="be동사 " />
-            </ListItemButton>
-          </List>
-        </Link>
-        <List component="div" disablePadding>
-          <ListItemButton sx={{ pl: 4 }}>
-            <ListItemIcon>
-              <StarBorder />
-            </ListItemIcon>
-            <ListItemText primary="일반 동사" />
-          </ListItemButton>
-        </List>
-      </Collapse>
-    </List>
+    <div>
+      <h1>{quizzes.length} Grammar Quizzes</h1>
+      <ul>
+        {quizzes.map((quiz) => (
+          <li key={quiz.id}>
+            <Link to={`/grammar/test/${quiz.id}/`}> {quiz.title}</Link>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
-}
+};
+
+export default TestPage;
